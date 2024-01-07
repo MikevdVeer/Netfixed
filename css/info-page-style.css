@@ -19,7 +19,7 @@ body {
 
 .start a {
     text-decoration: none;
-    color: #fff;
+    color: #ffc119;
 }
 
 .item a:visited {
@@ -143,13 +143,11 @@ input {
 
 footer {
     /* text-align: center; */
-    margin: 20px;
     padding: 50px;
 }
 
 footer a {
-    color: #959595;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 /* info-page */
@@ -191,6 +189,7 @@ footer a {
     justify-content: center;
     align-items: center;
     background-color: #363636;
+    color: #fff;
     width: 75px;
     height: 25px;
     margin: 5px;

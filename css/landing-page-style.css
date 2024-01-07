@@ -142,12 +142,10 @@ input {
 
 footer {
     /* text-align: center; */
-    margin: 20px;
     padding: 50px;
 }
 
 footer a {
-    color: #959595;
     font-size: 12px;
 }
 
