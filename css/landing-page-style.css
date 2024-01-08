@@ -40,11 +40,6 @@ body {
     color: #ffc119;
 }
 
-.underline {
-    text-decoration: underline 3px #ffc119;
-
-}
-
 header {
     font-size: large;
     padding: 1rem;
@@ -105,18 +100,18 @@ input {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 30px;
+    padding: 80px;
+    gap: 80px;
 }
 
 .item {
+    position: relative;
     width: 200px;
     height: 300px;
     border: 2px solid yellow;
-    margin: 40px;
     transition: transform 0.2s;
 }
 
-/* hover */
 .item:hover {
     transform: scale(1.05);
     cursor: pointer;
