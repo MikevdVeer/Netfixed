@@ -113,16 +113,18 @@ footer a {
     position: relative;
     width: 100%;
     max-width: 800px; /* Set your desired max width */
-    margin: auto; 
-    padding: 20px;
+    margin: auto;
+    margin-bottom: 15px;
+    /* padding: 20px; */
 }
 
 .video {
     position: relative;
-    margin-top: 5px;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    padding-bottom: 56.25%;
     height: 0;
-    overflow: hidden;
+    width: 100%;
+    background-color: #000;
+    margin-top: 5px;
 }
 
 iframe {
@@ -131,6 +133,9 @@ iframe {
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: 1; 
+    overflow-clip-margin: content-box !important;
+    overflow: clip !important;
 }
 
 h3 {
@@ -138,6 +143,7 @@ h3 {
 }
 
 .btn {
+    position: relative;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -146,11 +152,16 @@ h3 {
     padding-right: 15px;
 }
 
+.btn a {
+    color: #ffc119;
+}
+
 /* info-page */
 .epi-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;    
+    gap: 0.7em;
     position: relative;
     margin-top: 5px;
     padding: 20px;
@@ -168,7 +179,6 @@ h3 {
     color: #fff;
     width: 75px;
     height: 25px;
-    margin: 5px;
     transition: all 0.3s linear 0s;
 }
 
@@ -182,17 +192,13 @@ h3 {
 }
 
 @media only screen and (max-width: 650px) {
-    
-    .start {
+    .start,
+    .container,
+    .video-main,
+    .video,
+    iframe {
         width: 100%;
+        padding: 0;
+        min-height: 260px;
     }
-
-    .container {
-        width: 100%;
-    }
-
-    .video{
-        width: 100%;
-    }
-    
 }

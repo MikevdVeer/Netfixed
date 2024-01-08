@@ -166,6 +166,21 @@ footer a {
     left: 20px;
 }
 
+.discription button {
+    font-size: 16px;
+    background-color: #ffc119;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button {
+    transition: transform 0.2s;
+}
+
+.discription button:hover {
+    transform: scale(1.09);
+}
+
 .content img {
     position: relative;
     max-width: 100%;
@@ -204,3 +219,5 @@ footer a {
 .episode:not(:hover) {
     animation: flash 2s;
 }
+
+
