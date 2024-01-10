@@ -23,7 +23,7 @@
     "SWORD ART ONLINE: ALICIZATION - WAR OF UNDERWORLD": {
         "id": 4,
         "title": "SWORD ART ONLINE: ALICIZATION - WAR OF UNDERWORLD",
-        "img": "https://gogocdn.net/cover/sword-art-online-alicization.png",
+        "img": "https://gogocdn.net/cover/sword-art-online-alicization-war-of-underworld-dub.png",
         "episodes": 13,
         "page": "./info-pages/sao-alicization-warofunderworld.html"
     },
@@ -31,12 +31,12 @@
         "id": 5,
         "title": "UNDEAD UNLUCK",
         "img": "https://gogocdn.net/cover/undead-unluck-1696013292.png",
-        "episodes": 10,
+        "episodes": 13,
         "page": "./info-pages/undead unluck.html"
     },
-    "GOTOUBUN NO HANAYOME": {
+    "gotoubun no hanayome": {
         "id": 6,
-        "title": "GOTOUBUN NO HANAYOME",
+        "title": "gotoubun no hanayome",
         "img": "https://gogocdn.net/cover/gotoubun-no-hanayome.png",
         "episodes": 12,
         "page": "./info-pages/gotobun no hanayome.html"

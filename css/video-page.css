@@ -46,6 +46,8 @@ body {
 }
 
 header {
+    display: flex;
+    flex-wrap: wrap;
     font-size: large;
     padding: 1rem;
     justify-content: center;
@@ -54,14 +56,17 @@ header {
 }
 
 header h3 {
-    color: yellow;
+    position: relative;
+    top: 5px;
     font-size: xx-large;
+    /* -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: #ffc119; */
+    color: yellow;
     padding: 10px;
 }
 
-.container {
+main {
     border: 1px solid #fff;
-    height: 100%;
     width: 80%;
     height: 100%;
     margin: auto;
@@ -70,13 +75,13 @@ header h3 {
 .release {
     position: relative;
     background-color: #ffc119;
+    margin-bottom: 10px;
     padding: 10px;
     color: black;
 }
 
 .release h3 {
     display: inline-block;
-    margin: 3px;
     cursor: pointer;
 }
 
@@ -90,10 +95,6 @@ header h3 {
 
 .release h3:hover {
     color: #fff;
-}
-
-.items {
-    padding: 30px;
 }
 
 footer {
@@ -110,32 +111,38 @@ footer a {
 
 /* video iframe */
 .video-main {
-    position: relative;
-    width: 100%;
-    max-width: 800px; /* Set your desired max width */
+    width: 95%;
     margin: auto;
-    margin-bottom: 15px;
-    /* padding: 20px; */
+    margin-bottom: 20px;
 }
 
 .video {
     position: relative;
     padding-bottom: 56.25%;
     height: 0;
-    width: 100%;
+    max-width: 100%;
     background-color: #000;
-    margin-top: 5px;
 }
 
-iframe {
+.video iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1; 
+}
+
+element.style {
+    width: 100%;
+}
+
+iframe {
     overflow-clip-margin: content-box !important;
     overflow: clip !important;
+    border-width: 2px;
+    border-style: inset;
+    border-color: initial;
+    border-image: initial;
 }
 
 h3 {
@@ -156,18 +163,25 @@ h3 {
     color: #ffc119;
 }
 
-/* info-page */
+.epi-title {
+    position: relative;
+    width: 91.5%;
+    margin: auto;
+    margin-bottom: 3px;
+}
+
 .epi-container {
+    position: relative;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;    
+    flex-wrap: wrap;
     gap: 0.7em;
-    position: relative;
-    margin-top: 5px;
-    padding: 20px;
-    width: 100%;
+    width: 95%;
+    margin: auto;
+    margin-bottom: 15px;
     height: 100%;
-    border: 3px solid white;
+    padding: 10px;
+    border: 1px solid white;
 }
 
 .episode {
@@ -191,13 +205,13 @@ h3 {
     animation: flash 2s;
 }
 
-@media only screen and (max-width: 650px) {
-    .start,
-    .container,
-    .video-main,
+@media only screen and (max-width: 800px) and (min-width: 300px) {
+
     .video,
     iframe {
         width: 100%;
+        height: 100%;
+        margin: 0;
         padding: 0;
         min-height: 260px;
     }

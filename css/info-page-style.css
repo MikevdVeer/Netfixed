@@ -22,10 +22,6 @@ body {
     color: #ffc119;
 }
 
-.item a:visited {
-    color: #ffc119;
-}
-
 .start header nav li {
     border-radius: 3px;
     display: inline-block;
@@ -54,10 +50,12 @@ header {
 }
 
 header h3 {
-    color: yellow;
     font-size: xx-large;
+    /* -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: #ffc119; */
+    color: yellow;
     padding: 10px;
-}
+}   
 
 /* input */
 input {
@@ -104,41 +102,11 @@ input {
 .items {
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: center; */
     padding: 30px;
 }
 
-.item {
-    width: 200px;
-    height: 300px;
-    border: 2px solid yellow;
-    margin: 40px;
-    transition: transform 0.2s;
-}
-
-/* hover */
-.item:hover {
-    transform: scale(1.05);
-    cursor: pointer;
-}
-
-.item img {
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-    cursor: pointer;
-}
-
-
-.item p {
-    font-size: small;
-    text-align: center;
-    margin: 5px;
-}
-
-.item .name {
-    color: #ffc119;
-    cursor: pointer;
+.items img {
+    width: 300px;
 }
 
 footer {
@@ -156,8 +124,6 @@ footer a {
     position: relative;
     width: 100%;
     height: 100%;
-    border: 3px solid black;
-    padding: 50px;
     margin-bottom: 20px;
 }
 

@@ -54,8 +54,10 @@ header {
 }
 
 header h3 {
-    color: yellow;
+    color: black;
     font-size: xx-large;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: #ffc119;
     padding: 10px;
 }
 
@@ -194,10 +196,19 @@ button{
 
 /* input */
 input {
+    position: relative;
     padding: 5px;
     border-radius: 20px;
     border: 2px solid #ffc119;
     outline: none;
+    color: black;
+    cursor: text;
+}
+
+i {
+    position: relative;
+    top: 1px;
+    right: 30px;
     color: black;
 }
 
