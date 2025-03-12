@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="../logo/logo.png">
-    <link rel="stylesheet" href="../css/video-page.css">
+    <link rel="icon" type="image/x-icon" href="/logo/logo.png">
+    <link rel="stylesheet" href="/css/video-page.css">
     <title>Netfixed</title>
 </head>
 
@@ -59,67 +59,67 @@
                     </div>
                     <h3 class="epi-title">Episodes</h3>
                     <div class="epi-container">
-                        <a href="#" onclick="loadEpisode(1)">
+                        <a href="https://mikevdveer.github.io/Netfixed/watch/SWORD%20ART%20ONLINE%20ALICIZATION-WAR-OF-UNDERGROUND/epi-1.html">
                             <div class="episode">
                                 <h4>EP 1</h4>
                             </div>
                         </a>
-                        <a href="#" onclick="loadEpisode(2)">
+                        <a href="https://mikevdveer.github.io/Netfixed/watch/SWORD%20ART%20ONLINE%20ALICIZATION-WAR-OF-UNDERGROUND/epi-2.html">
                             <div class="episode">
                                 <h4>EP 2</h4>
                             </div>
                         </a>
-                        <a href="#" onclick="loadEpisode(3)">
+                        <a href="https://mikevdveer.github.io/Netfixed/watch/SWORD%20ART%20ONLINE%20ALICIZATION-WAR-OF-UNDERGROUND/epi-3.html">
                             <div class="episode">
                                 <h4>EP 3</h4>
                             </div>
                         </a>
-                        <a href="#" onclick="loadEpisode(4)">
+                        <a href="https://mikevdveer.github.io/Netfixed/watch/SWORD%20ART%20ONLINE%20ALICIZATION-WAR-OF-UNDERGROUND/epi-4.html">
                             <div class="episode">
                                 <h4>EP 4</h4>
                             </div>
                         </a>
-                        <a href="#" onclick="loadEpisode(5)">
+                        <a href="https://mikevdveer.github.io/Netfixed/watch/SWORD%20ART%20ONLINE%20ALICIZATION-WAR-OF-UNDERGROUND/epi-5.html">
                             <div class="episode">
                                 <h4>EP 5</h4>
                             </div>
                         </a>
-                        <a href="#" onclick="loadEpisode(6)">
+                        <a href="https://mikevdveer.github.io/Netfixed/watch/SWORD%20ART%20ONLINE%20ALICIZATION-WAR-OF-UNDERGROUND/epi-6.html">
                             <div class="episode">
                                 <h4>EP 6</h4>
                             </div>
                         </a>
-                        <a href="#" onclick="loadEpisode(7)">
+                        <a href="https://mikevdveer.github.io/Netfixed/watch/SWORD%20ART%20ONLINE%20ALICIZATION-WAR-OF-UNDERGROUND/epi-7.html">
                             <div class="episode">
                                 <h4>EP 7</h4>
                             </div>
                         </a>
-                        <a href="#" onclick="loadEpisode(8)">
+                        <a href="https://mikevdveer.github.io/Netfixed/watch/SWORD%20ART%20ONLINE%20ALICIZATION-WAR-OF-UNDERGROUND/epi-8.html">
                             <div class="episode">
                                 <h4>EP 8</h4>
                             </div>
                         </a>
-                        <a href="#" onclick="loadEpisode(9)">
+                        <a href="https://mikevdveer.github.io/Netfixed/watch/SWORD%20ART%20ONLINE%20ALICIZATION-WAR-OF-UNDERGROUND/epi-9.html">
                             <div class="episode">
                                 <h4>EP 9</h4>
                             </div>
                         </a>
-                        <a href="#" onclick="loadEpisode(10)">
+                        <a href="https://mikevdveer.github.io/Netfixed/watch/SWORD%20ART%20ONLINE%20ALICIZATION-WAR-OF-UNDERGROUND/epi-10.html">
                             <div class="episode">
                                 <h4>EP 10</h4>
                             </div>
                         </a>
-                        <a href="#" onclick="loadEpisode(11)">
+                        <a href="https://mikevdveer.github.io/Netfixed/watch/SWORD%20ART%20ONLINE%20ALICIZATION-WAR-OF-UNDERGROUND/epi-11.html">
                             <div class="episode">
                                 <h4>EP 11</h4>
                             </div>
                         </a>
-                        <a href="#" onclick="loadEpisode(12)">
+                        <a href="https://mikevdveer.github.io/Netfixed/watch/SWORD%20ART%20ONLINE%20ALICIZATION-WAR-OF-UNDERGROUND/epi-12.html">
                             <div class="episode">
                                 <h4>EP 12</h4>
                             </div>
                         </a>
-                        <a href="#" onclick="loadEpisode(13)">
+                        <a href="https://mikevdveer.github.io/Netfixed/watch/SWORD%20ART%20ONLINE%20ALICIZATION-WAR-OF-UNDERGROUND/epi-13.html">
                             <div class="episode">
                                 <h4>EP 13</h4>
                             </div>
@@ -153,40 +153,40 @@
 
             let currentEpisodeIndex = 0;
 
-            // Function to load specific episodes
-            function loadEpisode(episodeNumber) {
-                const iframe = document.getElementById('videoIframe');
-                const episodeInfo = document.getElementById('episodeInfo');
+// Function to load specific episodes
+function loadEpisode(episodeNumber) {
+    const iframe = document.getElementById('videoIframe');
+    const episodeInfo = document.getElementById('episodeInfo');
 
-                // Update the iframe src with a new episode
-                currentEpisodeIndex = episodeNumber - 1;
-                iframe.src = episodeUrls[currentEpisodeIndex];
+    // Update the iframe src with a new episode
+    currentEpisodeIndex = episodeNumber - 1;
+    iframe.src = episodeUrls[currentEpisodeIndex];
 
-                // Update the episode information
-                episodeInfo.innerText = `Episode: ${episodeNumber}`;
-            }
+    // Update the episode information
+    episodeInfo.innerText = `Episode: ${episodeNumber}`;
+}
 
-            // Function to load the next episode
-            function loadNextEpisode() {
-                const iframe = document.getElementById('videoIframe');
-                const episodeInfo = document.getElementById('episodeInfo');
-                currentEpisodeIndex = (currentEpisodeIndex + 1) % episodeUrls.length;
-                iframe.src = episodeUrls[currentEpisodeIndex];
-                const nextEpisodeNumber = currentEpisodeIndex + 1;
-                episodeInfo.innerText = `Episode: ${nextEpisodeNumber}`;
-            }
+// Function to load the next episode
+function loadNextEpisode() {
+    const iframe = document.getElementById('videoIframe');
+    const episodeInfo = document.getElementById('episodeInfo');
+    currentEpisodeIndex = (currentEpisodeIndex + 1) % episodeUrls.length;
+    iframe.src = episodeUrls[currentEpisodeIndex];
+    const nextEpisodeNumber = currentEpisodeIndex + 1;
+    episodeInfo.innerText = `Episode: ${nextEpisodeNumber}`;
+}
 
-            // Move to the previous episode in the array
-            function loadPreviousEpisode() {
-                const iframe = document.getElementById('videoIframe');
-                const episodeInfo = document.getElementById('episodeInfo');
-                currentEpisodeIndex = (currentEpisodeIndex - 1 + episodeUrls.length) % episodeUrls.length;
-                iframe.src = episodeUrls[currentEpisodeIndex];
+// Move to the previous episode in the array
+function loadPreviousEpisode() {
+    const iframe = document.getElementById('videoIframe');
+    const episodeInfo = document.getElementById('episodeInfo');
+    currentEpisodeIndex = (currentEpisodeIndex - 1 + episodeUrls.length) % episodeUrls.length;
+    iframe.src = episodeUrls[currentEpisodeIndex];
 
-                // Update the episode information
-                const previousEpisodeNumber = currentEpisodeIndex + 1;
-                episodeInfo.innerText = `Episode: ${previousEpisodeNumber}`;
-            }
+    // Update the episode information
+    const previousEpisodeNumber = currentEpisodeIndex + 1;
+    episodeInfo.innerText = `Episode: ${previousEpisodeNumber}`;
+}
         </script>
     </div>
 </body>
