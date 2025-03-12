@@ -1,15 +1,19 @@
 function searchItems() {
-    const searchInput = document.getElementById('keyword').value.toLowerCase();
-    searchInSection('animeItems', searchInput);
-  }
+    const searchInputElement = document.getElementById('keyword');
+    if (searchInputElement) {
+        const searchInput = searchInputElement.value.toLowerCase();
+        searchInSection('animeItems', searchInput);
+        searchInSection('movieItems', searchInput);
+    }
+}
 
-  function searchInSection(sectionId, searchInput) {
-    const items = document.getElementById(sectionId).querySelectorAll('.item');
+function searchInSection(sectionId, searchInput) {
+    const items = document.getElementById(sectionId)?.querySelectorAll('.item') || [];
 
     for (let i = 0; i < items.length; i++) {
         const item = items[i];
         const itemName = item.querySelector('.name');
-        const itemNameText = itemName.textContent.toLowerCase();
+        const itemNameText = itemName ? itemName.textContent.toLowerCase() : '';
 
         if (searchInput === "") {
             item.style.display = '';
@@ -25,53 +29,54 @@ function searchItems() {
     }
 }
 
+// Fetch data for animes
+fetch("json/animes.json")
+    .then((response) => response.json())
+    .then((myData) => {
+        const animeItemsElement = document.getElementById('animeItems');
+        if (animeItemsElement) {
+            Object.keys(myData).forEach((animeKey) => {
+                const anime = myData[animeKey];
+                animeItemsElement.innerHTML += `
+                    <div class="item">
+                        <a href="${anime.page}">
+                            <img src="${anime.img}" alt="${anime.title}">
+                            <p class="name">${anime.title}</p>
+                            <p class="episode">episodes: ${anime.episodes}</p>
+                        </a>
+                    </div>`;
+            });
+        }
+    });
 
-  // fetch data animes
-  fetch("json/animes.json")
-      .then((response) => response.json())
-      .then((myData) => {
-          const animeItems = document.getElementById('animeItems');
+// Fetch data for movies
+fetch("json/movies.json")
+    .then((response) => response.json())
+    .then((myData) => {
+        const movieItemsElement = document.getElementById('movieItems');
+        if (movieItemsElement) {
+            Object.keys(myData).forEach((movieKey) => {
+                const movie = myData[movieKey];
+                movieItemsElement.innerHTML += `
+                    <div class="item">
+                        <a href="${movie.page}">
+                            <img src="${movie.img}" alt="${movie.title}">
+                            <p class="name">${movie.title}</p>
+                        </a>
+                    </div>`;
+            });
+        }
+    });
 
-          Object.keys(myData).forEach((animeKey) => {
-              const anime = myData[animeKey];
-
-              animeItems.innerHTML += `
-                  <div class="item">
-                    <a href="${anime.page}">
-                      <img src="${anime.img}" alt="${anime.title}">
-                      <p class="name">${anime.title}</a></p>
-                      <p class="episode">episodes: ${anime.episodes}</p>
-                  </div>`;
-          });
-      });
-
-  // fetch data movies
-  fetch("json/movies.json")
-      .then((response) => response.json())
-      .then((myData) => {
-          const movieItems = document.getElementById('movieItems');
-
-          Object.keys(myData).forEach((movieKey) => {
-              const movie = myData[movieKey];
-
-              movieItems.innerHTML += `
-                  <div class="item">
-                    <a href="${movie.page}">
-                      <img src="${movie.img}" alt="${movie.title}">
-                      <p class="name">${movie.title}</a></p>
-                      <!-- Adjust the content based on your movie data structure -->
-                  </div>`;
-          });
-      });
-
-    //   Login form
-      document.addEventListener('DOMContentLoaded', function () {
-        document.querySelector('.login-form').addEventListener('submit', function (event) {
+// Login form
+document.addEventListener('DOMContentLoaded', function () {
+    const loginForm = document.querySelector('.login-form');
+    if (loginForm) {
+        loginForm.addEventListener('submit', function (event) {
             event.preventDefault();
-            
-            let username = document.querySelector('.login-form input[type="text"]').value;
-            let password = document.querySelector('.login-form input[type="password"]').value;
-    
+            let username = loginForm.querySelector('input[type="text"]').value;
+            let password = loginForm.querySelector('input[type="password"]').value;
+
             if (username === 'Admin' && password === 'Admin') {
                 alert("Welcome Admin");
                 window.location.href = 'landing-page.html';
@@ -79,4 +84,5 @@ function searchItems() {
                 alert('Invalid username or password');
             }
         });
-    });
+    }
+});
