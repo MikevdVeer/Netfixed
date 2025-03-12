@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="icon" type="image/x-icon" href="/logo/logo.png">
+    <link rel="icon" type="image/x-icon" href="logo/logo.png">
     <link rel="stylesheet" href="./css/landing-page-style.css">
     <title>Netfixed</title>
 </head>
@@ -16,28 +16,17 @@
         <header>
             <h3>Netfixed</h3>
 
-
             <nav>
                 <ul>
-                    <a href="landing-page.html">
-                        <li>Home</li>
-                    </a>
-                    <a href="movies-page.html">
-                        <li class="underline">Movies</li>
-                    </a>
-                    <a href="new-page.html">
-                        <li>New</li>
-                    </a>
-                    <a href="populair-page.html">
-                        <li>Populair</li>
-                    </a>
+                    <li><a href="landing-page.html">Home</a></li>
+                    <li><a href="movies-page.html" class="underline">Movies</a></li>
+                    <li><a href="new-page.html">New</a></li>
+                    <li><a href="populair-page.html">Populair</a></li>
                     <input placeholder="search" name="keyword" id="keyword" type="text" value="" autocomplete="off"
                         oninput="searchItems()" maxlength="16"><i class="fa fa-search"></i>
-                        <a href="login-page.html">
-                            <i class="fa-solid fa-arrow-right-to-bracket"></i>
-                        </a>
-                        <!-- menu bar mobile support -->
-                        <!-- <i class="fa-solid fa-bars"></i> -->
+                    <li><a href="login-page.html">
+                        <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                    </a></li>
                 </ul>
             </nav>
 
@@ -55,7 +44,12 @@
             </div>
         </main>
         <footer>
-            <p><a href="">About us</a> | <a href=""> Contact us</a> | <a href="">Privacy</a> | <a href="landing-page.html">Netfixed</a></p>
+            <p>
+                <li><a href="">About us</a></li> | 
+                <li><a href="">Contact us</a></li> | 
+                <li><a href="">Privacy</a></li> | 
+                <li><a href="landing-page.html">Netfixed</a></li>
+            </p>
         </footer>
     </div>
     <script src="./js/main-movies.js"></script>
